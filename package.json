@@ -1,0 +1,58 @@
+{
+  "name": "aifmd-toolkit",
+  "version": "1.0.0",
+  "description": "Open-source CLI for AIFMD II compliance — sanctions screening, LEI lookup, NCA profiles, Annex IV validation, and more.",
+  "main": "dist/cli.js",
+  "bin": {
+    "aifmd-toolkit": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "aifmd",
+    "aifmd-ii",
+    "compliance",
+    "sanctions",
+    "screening",
+    "lei",
+    "annex-iv",
+    "esma",
+    "nca",
+    "regulatory",
+    "fund-management",
+    "cli"
+  ],
+  "author": "Caelith <hello@caelith.tech>",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caelith-tech/aifmd-toolkit.git"
+  },
+  "homepage": "https://www.caelith.tech",
+  "bugs": {
+    "url": "https://github.com/caelith-tech/aifmd-toolkit/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}
