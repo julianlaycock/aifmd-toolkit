@@ -32,11 +32,11 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/caelith-tech/aifmd-toolkit.git"
+    "url": "https://github.com/julianlaycock/aifmd-toolkit.git"
   },
   "homepage": "https://www.caelith.tech",
   "bugs": {
-    "url": "https://github.com/caelith-tech/aifmd-toolkit/issues"
+    "url": "https://github.com/julianlaycock/aifmd-toolkit/issues"
   },
   "engines": {
     "node": ">=18"

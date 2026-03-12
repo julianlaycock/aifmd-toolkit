@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import chalk from "chalk";
 import { heading, error, warn, success, FOOTER } from "../format.js";
 
-const VALID_AIF_TYPES = new Set(["HFND", "PEQF", "REST", "FOFS", "OTHR", "NONE"]);
+const VALID_AIF_TYPES = new Set(["HFND", "PEQF", "REST", "FOFS", "VCAP", "INFR", "COMF", "OTHR", "NONE"]);
 
 const EU_COUNTRY_CODES = new Set([
   "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR",

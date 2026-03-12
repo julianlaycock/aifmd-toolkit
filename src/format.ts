@@ -35,32 +35,3 @@ export function printResponse(title: string, body: string): void {
   console.log(FOOTER);
 }
 
-export function printErrors(
-  errors: { level: "error" | "warning"; message: string }[]
-): void {
-  for (const e of errors) {
-    console.log(e.level === "error" ? error(e.message) : warn(e.message));
-  }
-}
-
-export function printTable(
-  headers: string[],
-  rows: string[][]
-): void {
-  // Calculate column widths
-  const widths = headers.map((h, i) =>
-    Math.max(h.length, ...rows.map((r) => (r[i] ?? "").length))
-  );
-
-  const sep = widths.map((w) => "─".repeat(w + 2)).join("┼");
-  const formatRow = (row: string[]) =>
-    row.map((cell, i) => ` ${(cell ?? "").padEnd(widths[i]!)} `).join("│");
-
-  console.log(chalk.dim(`  ${sep}`));
-  console.log(chalk.bold(`  ${formatRow(headers)}`));
-  console.log(chalk.dim(`  ${sep}`));
-  for (const row of rows) {
-    console.log(`  ${formatRow(row)}`);
-  }
-  console.log(chalk.dim(`  ${sep}`));
-}
